@@ -1,0 +1,13 @@
+/*!
+ * Print-Ready v0.0.1 (https://github.com/vinorodrigues/print-ready)
+ * Copyright 2016 Vino Rodrigues
+ * Licensed under MIT (https://github.com/vinorodrigues/print-ready/blob/master/LICENSE)
+ */
+
+@media print {
+	@import "_printer-ready";
+}
+
+@media screen {
+	@import "_screen-ready";
+}

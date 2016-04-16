@@ -1,0 +1,64 @@
+/*!
+ * Print-Ready for Bootstrap 3
+ * Print-Ready v0.0.1 (https://github.com/vinorodrigues/print-ready)
+ * Copyright 2016 Vino Rodrigues
+ * Licensed under MIT (https://github.com/vinorodrigues/print-ready/blob/master/LICENSE)
+ */
+
+// --- variables ---
+
+.clearfix {}  // stupid Circular reference in grid.less
+
+@import "lib/variables.less";
+@import "lib/mixins/grid-framework.less";
+@import "lib/mixins/grid.less";
+
+// --- the real deal starts here ---
+
+@media print {
+	@import (less) "../../html/scss/_printer-ready.scss";
+
+	acronym,
+	abbr,
+	acronym[title]:after,
+	abbr[title]:after {
+		border-bottom: none !important;
+	}
+	acronym[data-original-title]:after,
+	abbr[data-original-title]:after {
+		content: " (" attr(data-original-title) ")";
+		font-size: 80%;
+		border-bottom: none;
+	}
+
+	.container,
+	.container-fluid {
+		.container-fixed();
+		width: auto;
+		min-width: 750px;
+	}
+
+	.hidden-pr,
+	.col-pr-0 {
+		display: none !important;
+	}
+
+	.make-grid(pr);  // uses grid-framework.less
+
+	.col-pr-0 { width: 0; }
+	.col-pr-pull-0 { right: 0; }
+	.col-pr-push-0 { left: 0; }
+	.col-pr-offset-0 { margin-left: 0; }
+
+	div.alert,
+	.btn,
+	.nav,
+	.navbar,
+	.breadcrumb {
+		display: none !important;
+	}
+}
+
+@media screen {
+	@import (less) "../../html/scss/_screen-ready.scss";
+}

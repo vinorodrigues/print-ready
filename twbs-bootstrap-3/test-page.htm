@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1" name="viewport"><!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta content="" name="description">
+	<meta content="" name="author">
+	<title>Print-Ready Test File</title><!-- Bootstrap core CSS -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet">
+	<!-- link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.css" rel="stylesheet" --><!-- Optional theme -->
+	<link href="css/bootstrap-pr.css" rel="stylesheet" media="print">
+
+	<style>
+		body {
+			margin-top: 38px;
+		}
+
+		.preview-b {
+			height: 38px;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			color: white;
+			background-color: rgba(0,0,0,0.75);
+			margin: 0;
+			padding: 4px 30px;
+		}
+
+		.preview-b .btn { margin-left: 30px; }
+
+		.preview-i { display: none;}
+
+		.preview .preview-d { outline: 1px dashed rgba(255,0,0,0.25); }
+		.preview div[class^="col-"] { outline: 1px dashed rgba(0,0,255,0.25); }
+		.preview div[class^="container"] { outline: 1px dashed rgba(0,255,0,0.25); }
+
+		.preview .preview-i {
+			display: inline-block;
+	        	padding: 2px 4px 2px 4px;
+	        	border: 1px dotted rgba(255,0,0,0.5);
+			position: absolute;
+			background-color: rgba(255,255,255,0.75);
+			color: rgba(255,0,0,0.5);
+			font-size: 115%;
+			z-index: 999;
+			font-weight: normal;
+			font-style: normal;
+		}
+		.preview .preview-i.right {
+			right: 0;
+		}
+		.preview .preview-i b { font-weight: normal !important; color: rgba(0,0,255,0.5); }
+		.preview .preview-i i { font-style: normal; color: rgba(0,127,0,0.5); }
+		.preview .preview-i i:before { content: " (" }
+		.preview .preview-i i:after { content: ") " }
+
+		@media print {
+			body { margin-top: 0; }
+			.preview-b,
+			.preview-i { display: none !important; }
+			.preview div[class^="col-"],
+			.preview div[class^="container"],
+			.preview-d { ouline: none; }
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="blog-header preview-d">
+			<div class="preview-i">.blog-header</div>
+			<h1 class="blog-title">Printing with Print-Ready for Bootstrap 3</h1>
+			<p class="lead blog-description hidden-print">You can be selective on what parts of the header needs to print.</p>
+		</div>
+		<nav class="navbar navbar-inverse preview-d">
+			<div class="preview-i">.navbar <i>always hidden</i></div>
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button aria-expanded="false" class="navbar-toggle collapsed" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> <a class="navbar-brand" href="#">Brand</a>
+			</div><!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+					<li><a href="#">Link</a></li>
+					<li class="dropdown">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Dropdown <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider" role="separator"></li>
+							<li><a href="#">Separated link</a></li>
+							<li class="divider" role="separator"></li>
+							<li><a href="#">One more separated link</a></li>
+						</ul>
+					</li>
+				</ul>
+				<form class="navbar-form navbar-right" role="search">
+					<div class="form-group">
+						<input class="form-control" placeholder="Search" type="text">
+					</div><button class="btn btn-default" type="submit">Submit</button>
+				</form>
+			</div><!-- /.navbar-collapse -->
+		</nav>
+		<div class="row">
+			<!-- @@@@@@@@@@@@@@@@@@@@ Main Content @@@@@@@@@@@@@@@@@@@@ -->
+			<div class="blog-main col-lg-8 col-lg-push-2 col-md-7 col-md-push-3 col-sm-9 col-xs-12 col-pr-12 col-pr-push-0">
+				<div class="preview-i right">.blog-main <b>col-pr-12 col-pr-push-0</b></div>
+				<div class="preview-d">
+					<div class="preview-i">.breadcrumb <i>always hidden</i></div>
+					<ol class="breadcrumb preview-d">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Library</a></li>
+						<li class="active">Data</li>
+					</ol>
+				</div>
+				<div class="advert preview-d hidden-print">
+					<div class="preview-i">.advert <b>.hidden-print</b></div>
+					<center>
+						<small>This is an advert</small><br>
+						<img class="img-responsive" src="http://placehold.it/728x90?text=Leaderboard+Ad">
+					</center>
+				</div>
+				<div class="blog-post preview-d">
+					<div class="preview-i right">.blog-post</div>
+
+					<h2 class="blog-post-title">Sample blog post</h2>
+					<p class="blog-post-meta">April 15, 2016 by <a href="#">Vino</a></p>
+					<p>This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
+					<hr>
+					<p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed
+					posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+					<blockquote>
+						<p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+					</blockquote>
+					<p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+					<h2>Heading</h2>
+					<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta
+					ac consectetur ac, vestibulum at eros.</p>
+					<h3>Sub-heading</h3>
+					<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					<pre><code>Example code block</code></pre>
+					<p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+					<h3>Sub-heading</h3>
+					<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce
+					dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+					<ul>
+						<li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+						<li>Donec id elit non mi porta gravida at eget metus.</li>
+						<li>Nulla vitae elit libero, a pharetra augue.</li>
+					</ul>
+					<p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+					<ol>
+						<li>Vestibulum id ligula porta felis euismod semper.</li>
+						<li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
+						<li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
+					</ol>
+					<p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
+				</div><!-- /.blog-post -->
+
+				<!-- @@@@@@@@@@@@@@@@@@@@ Pager @@@@@@@@@@@@@@@@@@@@ -->
+				<nav class="preview-d">
+					<div class="preview-i">.pager <i>always hidden</i></div>
+					<ul class="pager">
+						<li><a href="#">Previous</a></li>
+						<li><a href="#">Next</a></li>
+					</ul>
+				</nav>
+
+				<!-- @@@@@@@@@@@@@@@@@@@@ Comments @@@@@@@@@@@@@@@@@@@@ -->
+				<div class="blog-comments preview-d">
+					<div class="preview-i right">.blog-comments</div>
+
+					<h3 class="blog-post-title">Comments</h3>
+
+					<div class="media">
+						<div class="media-left">
+							<a href="#"><img src="http://placehold.it/64x64"></a>
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">Media heading</h4>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus
+							viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+						</div>
+					</div>
+					<div class="media">
+						<div class="media-left">
+							<a href="#"><img src="http://placehold.it/64x64"></a>
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">Media heading</h4>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus
+							viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+							<div class="media">
+								<div class="media-left">
+									<a href="#"><img src="http://placehold.it/64x64"></a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">Nested media heading</h4>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate
+									at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<h3 class="blog-post-title">Leave a comment</h3>
+
+					<form>
+						<div class="preview-i right">form <i>buttons hidden</i></div>
+
+						<div class="form-group">
+							<label for="exampleInputEmail1">Email address</label>
+							<input class="form-control" id="exampleInputEmail1" placeholder="Email" type="email">
+						</div>
+						<div class="form-group">
+							<label for="exampleInputMessage1">Your Comment</label>
+							<textarea class="form-control" id="exampleInputMessage1" rows="3"></textarea>
+							<p class="help-block">Example block-level help text here.</p>
+						</div>
+						<div class="checkbox">
+							<label><input type="checkbox"> Check me out</label>
+						</div>
+						<button class="btn btn-default" type="submit">Submit</button>
+					</form>
+
+
+
+				</div><!-- /.blog-post -->
+
+			</div><!-- /.blog-main -->
+
+			<!-- @@@@@@@@@@@@@@@@@@@@ Sidebar 1 @@@@@@@@@@@@@@@@@@@@ -->
+			<div class="blog-sidebar col-lg-2 col-lg-pull-8 col-md-3 col-md-pull-7 col-sm-3 col-xs-12 col-pr-12 col-pr-pull-0">
+				<div class="preview-i">.blog-sidebar <b>.col-pr-12 .col-pr-pull-0<b></div>
+				<div class="sidebar-module sidebar-module-inset">
+					<h4>About</h4>
+					<p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+				</div>
+				<div class="sidebar-module hidden-print">
+					<div class="preview-i"><b>.hidden-print<b></div>
+					<h4>Archives</h4>
+					<ol class="list-unstyled">
+						<li><a href="#">April 2016</a></li>
+						<li><a href="#">March 2016</a></li>
+						<li><a href="#">February 2016</a></li>
+						<li><a href="#">January 2016</a></li>
+					</ol>
+				</div>
+			</div><!-- /.blog-sidebar -->
+
+			<!-- @@@@@@@@@@@@@@@@@@@@  Sidebar 2 @@@@@@@@@@@@@@@@@@@@ -->
+			<div class="blog-sidebar col-lg-2 col-md-2 col-sm-3 col-pr-0">
+				<div class="preview-i">.blog-sidebar <b>.col-pr-0</b></div>
+				<div class="sidebar-module">
+					<h4>Elsewhere</h4>
+					<ol class="list-unstyled">
+						<li><a href="#">GitHub</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">Facebook</a></li>
+					</ol>
+				</div>
+				<div class="sidebar-module advert preview-d">
+					<div class="preview-i">.advert <i>hidden by parent</i></div>
+					<center>
+						<small>This is an advert</small><br>
+						<img class="img-responsive" src="http://placehold.it/240x400?text=Vertical+Rectangle+Ad">
+					</center>
+				</div>
+			</div><!-- /.blog-sidebar -->
+
+
+		</div><!-- /.row -->
+
+		<footer class="blog-footer preview-d" style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #ddd">
+			<div class="preview-i">.blog-footer</div>
+
+			<div class="row"><div class=".col-sm-12">
+				<center>
+				<p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a>.</p>
+				<p><a href="#">Back to top</a></p>
+				</center>
+			</div></div>
+		</footer>
+
+	</div><!-- /.container -->
+
+	<!-- Bootstrap core JavaScript
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://code.jquery.com/jquery-1.12.3.js"></script> <!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<!-- Preview stuff here
+	================================================== -->
+
+	<div class="preview-b">
+	<b>Print-Ready </b>
+	<button class="btn btn-danger btn-sm switch">&#128065; Preview regions of interets</button>
+	<button class="btn btn-info btn-sm print">&#128424; Print this page</button>
+	</div>
+	<script>
+		$('.print').on('click', function(e){
+			window.print();
+		});
+    		$('.switch').on('click', function(e) {
+      			$('.switch').toggleClass("active");
+      			$('body').toggleClass("preview");
+      			e.preventDefault();
+    		});
+	</script>
+</body>
+</html>
