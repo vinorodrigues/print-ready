@@ -9,11 +9,17 @@
 	<title>Print-Ready Test File</title><!-- Bootstrap core CSS -->
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet">
 	<!-- link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.css" rel="stylesheet" --><!-- Optional theme -->
-	<link href="css/bootstrap-pr.css" rel="stylesheet" media="print">
+	<link href="css/bootstrap-pr.css" rel="stylesheet">  <!-- !!!!! Do not use media="print" !!!!! -->
 
 	<style>
+		/* @@@@@@@@@@@@@@@@@@@@ used in this example @@@@@@@@@@@@@@@@@@@@ */
 		body {
 			margin-top: 38px;
+			height: 100%;
+		}
+
+		footer {
+			margin-bottom: 20px;
 		}
 
 		.preview-b {
@@ -64,10 +70,16 @@
 			.preview div[class^="container"],
 			.preview-d { ouline: none; }
 		}
+
+		/* ########## self promo ########## */
+		.print-ready-link { color: #2d678e; text-decoration: none; cursor: pointer; }
+		.print-ready-link:hover, .print-ready-link:focus { text-decoration: none; }
+		.print-ready-link i { font-style: normal; font-size: 80% }
+		.print-ready-link b { font-weight: normal; }
 	</style>
 </head>
 <body>
-
+	<a name="top"></a>
 	<div class="container">
 		<div class="blog-header preview-d">
 			<div class="preview-i">.blog-header</div>
@@ -100,7 +112,7 @@
 				</ul>
 				<form class="navbar-form navbar-right" role="search">
 					<div class="form-group">
-						<input class="form-control" placeholder="Search" type="text">
+						<input class="form-control" placeholder="Search" type="search">
 					</div><button class="btn btn-default" type="submit">Submit</button>
 				</form>
 			</div><!-- /.navbar-collapse -->
@@ -120,7 +132,7 @@
 				<div class="advert preview-d hidden-print">
 					<div class="preview-i">.advert <b>.hidden-print</b></div>
 					<center>
-						<small>This is an advert</small><br>
+						<small>This is an advertisement</small><br>
 						<img class="img-responsive" src="http://placehold.it/728x90?text=Leaderboard+Ad">
 					</center>
 				</div>
@@ -129,6 +141,7 @@
 
 					<h2 class="blog-post-title">Sample blog post</h2>
 					<p class="blog-post-meta">April 15, 2016 by <a href="#">Vino</a></p>
+					<img src="http://placekitten.com/300/180" width="300" height="180" class="pull-right img-responsive" style="margin-left: 10px; margin-bottom: 10px">
 					<p>This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
 					<hr>
 					<p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed
@@ -138,6 +151,7 @@
 					</blockquote>
 					<p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
 					<h2>Heading</h2>
+					<img src="http://placekitten.com/300/150" width="300" height="150" class="pull-left img-responsive" style="margin-right: 10px; margin-bottom: 10px">
 					<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta
 					ac consectetur ac, vestibulum at eros.</p>
 					<h3>Sub-heading</h3>
@@ -178,7 +192,7 @@
 
 					<div class="media">
 						<div class="media-left">
-							<a href="#"><img src="http://placehold.it/64x64"></a>
+							<a href="#"><img src="http://placekitten.com/64/64" class="img-thumbnail img-circle"></a>
 						</div>
 						<div class="media-body">
 							<h4 class="media-heading">Media heading</h4>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus
@@ -187,14 +201,14 @@
 					</div>
 					<div class="media">
 						<div class="media-left">
-							<a href="#"><img src="http://placehold.it/64x64"></a>
+							<a href="#"><img src="http://placekitten.com/64/64" class="img-thumbnail img-circle"></a>
 						</div>
 						<div class="media-body">
 							<h4 class="media-heading">Media heading</h4>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus
 							viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
 							<div class="media">
 								<div class="media-left">
-									<a href="#"><img src="http://placehold.it/64x64"></a>
+									<a href="#"><img src="http://placekitten.com/64/64" class="img-thumbnail img-circle"></a>
 								</div>
 								<div class="media-body">
 									<h4 class="media-heading">Nested media heading</h4>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate
@@ -232,13 +246,13 @@
 
 			<!-- @@@@@@@@@@@@@@@@@@@@ Sidebar 1 @@@@@@@@@@@@@@@@@@@@ -->
 			<div class="blog-sidebar col-lg-2 col-lg-pull-8 col-md-3 col-md-pull-7 col-sm-3 col-xs-12 col-pr-12 col-pr-pull-0">
-				<div class="preview-i">.blog-sidebar <b>.col-pr-12 .col-pr-pull-0<b></div>
+				<div class="preview-i">.blog-sidebar <b>.col-pr-12 .col-pr-pull-0</b></div>
 				<div class="sidebar-module sidebar-module-inset">
 					<h4>About</h4>
 					<p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
 				</div>
 				<div class="sidebar-module hidden-print">
-					<div class="preview-i"><b>.hidden-print<b></div>
+					<div class="preview-i"><b>.hidden-print</b></div>
 					<h4>Archives</h4>
 					<ol class="list-unstyled">
 						<li><a href="#">April 2016</a></li>
@@ -263,7 +277,7 @@
 				<div class="sidebar-module advert preview-d">
 					<div class="preview-i">.advert <i>hidden by parent</i></div>
 					<center>
-						<small>This is an advert</small><br>
+						<small>This is an advertisement</small><br>
 						<img class="img-responsive" src="http://placehold.it/240x400?text=Vertical+Rectangle+Ad">
 					</center>
 				</div>
@@ -277,8 +291,9 @@
 
 			<div class="row"><div class=".col-sm-12">
 				<center>
-				<p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a>.</p>
-				<p><a href="#">Back to top</a></p>
+				Blog template built for <a href="http://getbootstrap.com">Bootstrap</a>.
+				<span class="noprint"><br><a href="#top">↑ Back to top</a> | <a onclick="window.print();" class="print-ready-link"><i>&#128424;</i> Print Ready</a></span>
+				<span class="noscreen"><br>Thank you for printing with <a href="http://github.com/vinorodrigues/print-ready">&#128424; Print-Ready</a></span>
 				</center>
 			</div></div>
 		</footer>
@@ -295,7 +310,7 @@
 	================================================== -->
 
 	<div class="preview-b">
-	<b>Print-Ready </b>
+	<b>Print-Ready</b>
 	<button class="btn btn-danger btn-sm switch">&#128065; Preview regions of interets</button>
 	<button class="btn btn-info btn-sm print">&#128424; Print this page</button>
 	</div>
@@ -303,11 +318,11 @@
 		$('.print').on('click', function(e){
 			window.print();
 		});
-    		$('.switch').on('click', function(e) {
-      			$('.switch').toggleClass("active");
-      			$('body').toggleClass("preview");
-      			e.preventDefault();
-    		});
+		$('.switch').on('click', function(e) {
+			$('.switch').toggleClass("active");
+			$('body').toggleClass("preview");
+			e.preventDefault();
+		});
 	</script>
 </body>
 </html>

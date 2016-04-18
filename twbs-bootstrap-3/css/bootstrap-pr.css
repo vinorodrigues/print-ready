@@ -264,7 +264,7 @@
     display: none !important;
   }
 }
-@media screen {
+@media only screen {
   .noscreen,
   .hidden-screen {
     display: none;
