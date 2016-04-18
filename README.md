@@ -318,11 +318,19 @@ In Bootstrap 4 the grid positional classes have been renamed to
 
 ------------------------------------------------------------------------------
 
+Copyright and license
+---------------------
+
+Copyright 2016 Vino Rodrigues
+
+[MIT License][0]
+
 -> Made with &#x2665; by [@vinorod][7]<sup>&#x21d7;</sup> <-
 
 [css]: ./html/css/print-ready.css
 [bs3]: ./twbs-bootstrap-3/css/bootstrap-pr.css
 [bs4]: ./twbs-bootstrap-4/css/bootstrap-pr.css
+[0]: ./LICENSE
 [1]: http://www.w3schools.com/tags/tag_nav.asp
 [2]: http://compass-style.org
 [3]: http://getbootstrap.com
