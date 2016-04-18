@@ -97,13 +97,13 @@ Print-Ready also adds a few classes that enables web developers to hide (or
 1. Navigational links, like menu bars, side menus etc, document paging and
    pagination.
    * Ask yourself: Does this content only exist to send the browser user to
-     another location.
+     another location? - then hide it.
    * In HTML 5 it is recommended to encapsulate this content in a `<nav>` tag -
      these are already hidden.
 
-2. Embedded content - like videos.
-   * A standard 80gsm photocopy paper cannot play video.  Provide a link URL if
-   you must.
+2. Embedded content, like videos.
+   * A standard 80gsm photocopy paper cannot play video (as far as I know).
+     Provide a link URL in a print only span if you must.
 
 3. Advertising or banner ads.
    * This is maybe a tricky topic (because ads are both navigational and
@@ -121,7 +121,6 @@ There is a generic version of the CSS located at
  [`/html/css/print-ready.css`][css] in this project.
 
 ##### `.noprint` class
-  * Aliases `.dont-print` & `.hidden-print`
   * Usage:
 
     ```html
@@ -132,9 +131,10 @@ There is a generic version of the CSS located at
 
     Will hide the content when printed.
 
+  * Aliases are `.dont-print` & `.hidden-print`
+
 
 ##### `.noscreen` class
-  * Alias `.hidden-screen`
   * Usage:
 
     ```html
@@ -145,6 +145,8 @@ There is a generic version of the CSS located at
 
     Will hide the content when displayed on a screen, but will print it.
 
+  * Alias is `.hidden-screen`
+  
 ------------------------------------------------------------------------------
 
 ### Features
@@ -153,6 +155,7 @@ Print-Ready supports a few popular CSS frameworks, including:
 
 * Twitter Bootstrap 3 [&#x1F517;][3]<sup>&#x21d7;</sup>
 * Twitter Bootstrap 4 [&#128279;][4]<sup>&#x21d7;</sup>
+  * Currently in Alpha-2 / Work In Progress
 
 ------------------------------------------------------------------------------
 
@@ -217,8 +220,9 @@ Both container classes are made fluid.  i.e. there is no fixed width from the
 ##### `.col-pr-*` grid classes
 
 Using a set of `col-pr-*` classes, you can create an override grid system that
-  creates a page layout to house your content.  There is also a `col-pr-0`
-  class that hides the content from printing.
+  creates a page layout to house your content.
+
+There is also a `col-pr-0` class that hides the content from printing.
 
 Usage:
 ```html
