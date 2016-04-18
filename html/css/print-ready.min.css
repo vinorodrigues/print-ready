@@ -1,0 +1,5 @@
+/*!
+ * Print-Ready v0.0.1 (https://github.com/vinorodrigues/print-ready)
+ * Copyright 2016 Vino Rodrigues
+ * Licensed under MIT (https://github.com/vinorodrigues/print-ready/blob/master/LICENSE)
+ */@media print{*,*:before,*:after,*:first-letter,*:first-line{background:transparent !important;box-shadow:none !important;text-shadow:none !important}body{margin:0;padding:0}a[href]:after{content:" < " attr(href) " >";font-size:80%}a[class^="noprint"]:after,a[href^="#"]:after,a[href^="javascript:"]:after{content:""}a[class^="noprint"]{color:inherit;text-decoration:none}acronym[title]:after,abbr[title]:after{content:" (" attr(title) ")";font-size:80%}p,h2,h3{orphans:3;widows:3}h2,h3{page-break-after:avoid}tr,img{page-break-inside:avoid}img{max-width:100%}button,input[type="submit"],input[type="reset"],input[type="button"],nav,.noprint,.hidden-print,.dont-print{display:none !important}}@media only screen{.noscreen,.hidden-screen{display:none}}

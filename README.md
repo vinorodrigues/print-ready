@@ -2,7 +2,7 @@
 =====================
 CSS for printable websites.
 
-----------------------------------------
+------------------------------------------------------------------------------
 
 Preface
 -------
@@ -28,7 +28,7 @@ Modern web browsers can render the same content in different ways depending on
  utilizing CSS' **@media** rule (known as a media query).  But the media query
  also supports rendering content for printing differently.
 
-----------------------------------------
+------------------------------------------------------------------------------
 
 Print-Ready
 -----------
@@ -47,6 +47,7 @@ It is then up to the web developer to clean and format web pages for a perfect
 (*Remember* that this CSS should always be included last, so that the other
  styles can be overwritten.)
 
+------------------------------------------------------------------------------
 
 CSS and Responsive Frameworks  
 -----------------------------
@@ -117,7 +118,7 @@ Print-Ready also adds a few classes that enables web developers to hide (or
         include it.
 
 There is a generic version of the CSS located at
- [`html/css/print-ready.css`][css] in this project.
+ [`/html/css/print-ready.css`][css] in this project.
 
 ##### `.noprint` class
   * Aliases `.dont-print` & `.hidden-print`
@@ -144,7 +145,7 @@ There is a generic version of the CSS located at
 
     Will hide the content when displayed on a screen, but will print it.
 
-----------------------------------------
+------------------------------------------------------------------------------
 
 ### Features
 
@@ -153,7 +154,7 @@ Print-Ready supports a few popular CSS frameworks, including:
 * Twitter Bootstrap 3 [&#x1F517;][3]<sup>&#x21d7;</sup>
 * Twitter Bootstrap 4 [&#128279;][4]<sup>&#x21d7;</sup>
 
-----------------------------------------
+------------------------------------------------------------------------------
 
 #### Twitter Bootstrap 3
 
@@ -235,7 +236,7 @@ Usage:
  `.col-*-*` classes as it overrides select behavior.
 
 &#x2139; `.col-pr-pull-*`, `.col-pr-push-*` and `.col-pr-offset-*` classes are
- also provided, including their `.*-0` variants.
+ also provided, including their `.col-pr-*-0` variants.
 
 
 #### `.hidden-pr` class
@@ -260,7 +261,7 @@ The following classes are also overridden to be hidden on printing:
 * `.navbar`
 * `.breadcrumb`
 
-----------------------------------------
+------------------------------------------------------------------------------
 
 #### Twitter Bootstrap 4
 
@@ -299,24 +300,26 @@ print-ready/
 ##### Pull, push and offset
 
 In Bootstrap 4 the grid positional classes have been renamed to
- `.pull-pr-*`, `.push-pr-*` and `.offset-pr-*`, including `.*-0` variants.
+ `.pull-pr-*`, `.push-pr-*` and `.offset-pr-*`, including `.*-pr-0` variants.
 
 
-----------------------------------------
+------------------------------------------------------------------------------
 
 #### Other CSS Frameworks as <abbr title="Work In Progress">WIP</abbr>
 
 1. Zurb Foundation 6 [&#128279;][6]<sup>&#x21d7;</sup>
 
-#### Frameworks not supported
+#### Frameworks not supported _(yet)_
 
 1. HTML5 Boilerplate  (already has printer support)
 2. Skeleton
 3. PureCSS
 
+------------------------------------------------------------------------------
+
 -> Made with &#x2665; by [@vinorod][7]<sup>&#x21d7;</sup> <-
 
-[css]: ./html/css/print-ready.css
+[css]: ./html/css/
 [bs3]: ./twbs-bootstrap-3/css/bootstrap-pr.css
 [bs4]: ./twbs-bootstrap-4/css/bootstrap-pr.css
 [1]: http://www.w3schools.com/tags/tag_nav.asp

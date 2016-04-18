@@ -8,6 +8,6 @@
 	@import "_printer-ready";
 }
 
-@media screen {
+@media only screen {
 	@import "_screen-ready";
 }
