@@ -1,0 +1,60 @@
+/*!
+ * Print-Ready for Bootstrap 4
+ * Print-Ready v0.0.1 (https://github.com/vinorodrigues/print-ready)
+ * Copyright 2016 Vino Rodrigues
+ * Licensed under MIT (https://github.com/vinorodrigues/print-ready/blob/master/LICENSE)
+ */
+
+/* @import "compass"; */
+@import "lib/variables";
+@import "lib/mixins/clearfix";
+@import "lib/mixins/breakpoints";
+@import "lib/mixins/grid-framework";
+@import "lib/mixins/grid";
+
+// --- the real deal starts here ---
+
+@media print {
+	@import "../../html/scss/printer-ready";
+
+	acronym,
+	abbr,
+	acronym[title]:after,
+	abbr[title]:after {
+		border-bottom: none !important;
+	}
+	acronym[data-original-title]:after,
+	abbr[data-original-title]:after {
+		content: " (" attr(data-original-title) ")";
+		font-size: 80%;
+		border-bottom: none;
+	}
+
+	.container,
+	.container-fluid {
+		@include make-container();
+		width: auto;
+		min-width: 750px;
+	}
+
+	.hidden-pr,
+	.col-pr-0 {
+		display: none !important;
+	}
+
+  .col-pr-0 { width: 0; }
+
+	$print-breakpoints: ( pr: 0 );
+	@include make-grid-columns($grid-columns, $grid-gutter-width, $print-breakpoints);
+
+	div.alert,
+	.btn,
+	.nav,
+	.navbar {
+		display: none !important;
+	}
+}
+
+@media only screen {
+	@import "../../html/scss/screen-ready";
+}
