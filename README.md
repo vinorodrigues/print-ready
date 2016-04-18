@@ -160,7 +160,7 @@ Print-Ready supports a few popular CSS frameworks, including:
 
 ##### Getting Started
 
-Included in Print-Ready are the Bootstrap add-on stylesheets.
+Included in Print-Ready are the Bootstrap add-on [stylesheets][bs3].
 
 ```txt
 print-ready/
@@ -265,7 +265,8 @@ The following classes are also overridden to be hidden on printing:
 
 #### Twitter Bootstrap 4
 
-Mostly the same as for Bootstrap 3, with a few changes listed:
+Mostly the same as for Bootstrap 3, with a few changes in the
+ [stylesheets][bs4], including:
 
 ##### CSS files
 
@@ -319,7 +320,7 @@ In Bootstrap 4 the grid positional classes have been renamed to
 
 -> Made with &#x2665; by [@vinorod][7]<sup>&#x21d7;</sup> <-
 
-[css]: ./html/css/
+[css]: ./html/css/print-ready.css
 [bs3]: ./twbs-bootstrap-3/css/bootstrap-pr.css
 [bs4]: ./twbs-bootstrap-4/css/bootstrap-pr.css
 [1]: http://www.w3schools.com/tags/tag_nav.asp
