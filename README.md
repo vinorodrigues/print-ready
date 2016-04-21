@@ -67,26 +67,26 @@ Navigation tags are always hidden, including:
 * `<input type="reset">` - Form Reset button
 * `<input type="button">` - Form buttons
 * `<nav>` - [HTML5 Navigation][1]<sup>&#x21d7;</sup> groups, like menus and
-  side navigation bars.
+	side navigation bars.
 
 ##### Hyperlinks
 
 Modified print behavior of HTML anchors by appending the actual URL
  to the end of the link text, e.g.
 
-  ```html
-  <a href="your url here">Location Name</a>
-  ```
+	```html
+	<a href="your url here">Location Name</a>
+	```
 Prints as:
-  > Location Name &lt; your url here &gt;
+	> Location Name &lt; your url here &gt;
 
 ##### Abbreviations and Acronyms
 
-  ```html
-  ... follow the <abbr title="Uniform Resource Locator">URL</abbr> here ...
-  ```
+	```html
+	... follow the <abbr title="Uniform Resource Locator">URL</abbr> here ...
+	```
 Prints as:
-  > ... follow the URL (Uniform Resource Locator) here ...
+	> ... follow the URL (Uniform Resource Locator) here ...
 
 ### CSS Classes
 
@@ -95,58 +95,60 @@ Print-Ready also adds a few classes that enables web developers to hide (or
  of thumb, one would exclude in printing the following:
 
 1. Navigational links, like menu bars, side menus etc, document paging and
-   pagination.
-   * Ask yourself: Does this content only exist to send the browser user to
-     another location? - then hide it.
-   * In HTML 5 it is recommended to encapsulate this content in a `<nav>` tag -
-     these are already hidden.
+	 pagination.
+	 * Ask yourself: Does this content only exist to send the browser user to
+		 another location? - then hide it.
+	 * In HTML 5 it is recommended to encapsulate this content in a `<nav>` tag -
+		 these are already hidden.
 
 2. Embedded content, like videos.
-   * A standard 80gsm photocopy paper cannot play video (as far as I know).
-     Provide a link URL in a print only span if you must.
+	 * A standard 80gsm photocopy paper cannot play video (as far as I know).
+		 Provide a link URL in a print only span if you must.
 
 3. Advertising or banner ads.
-   * This is maybe a tricky topic (because ads are both navigational and
-     informative), but ask yourself:
-      * Is this someone else's ad? - then hide it.  (You'll not get paid for
-        printed impressions.)
-      * Is this ad yours, but time limited, like 'specials'? - the hide it.
-        (The prints will last far longer that your special and may not be
-        relevant when next read.)
-      * Is the ad yours, and the content relevant for the context of the page,
-        and doesn't display text like "click here" or "find out more"? - then
-        include it.
+	 * This is maybe a tricky topic (because ads are both navigational and
+		 informative), but ask yourself:
+			* Is this someone else's ad? - then hide it.  (You'll not get paid for
+				printed impressions.)
+			* Is this ad yours, but time limited, like 'specials'? - the hide it.
+				(The prints will last far longer that your special and may not be
+				relevant when next read.)
+			* Is the ad yours, and the content relevant for the context of the page,
+				and doesn't display text like "click here" or "find out more"? - then
+				include it.
+
+4. As a general rule, people choose to print only when they need the content - the main content that is.  A sites "feel" is not relative, so things that shape and style the website are irrelavant.  Branding is - so a logo, or a link to your site is important.  If you focus on printing relevant content only you're on a winner.
 
 There is a generic version of the CSS located at
  [`/html/css/print-ready.css`][css] in this project.
 
 ##### `.noprint` class
-  * Usage:
+	* Usage:
 
-    ```html
-    <div class="noprint">
-        Content
-    </div>
-    ```
+		```html
+		<div class="noprint">
+				Content
+		</div>
+		```
 
-    Will hide the content when printed.
+		Will hide the content when printed.
 
-  * Aliases are `.dont-print` & `.hidden-print`
+	* Aliases are `.dont-print` & `.hidden-print`
 
 
 ##### `.noscreen` class
-  * Usage:
+	* Usage:
 
-    ```html
-    <div class=".noscreen">
-        Content
-    </div>
-    ```
+		```html
+		<div class=".noscreen">
+				Content
+		</div>
+		```
 
-    Will hide the content when displayed on a screen, but will print it.
+		Will hide the content when displayed on a screen, but will print it.
 
-  * Alias is `.hidden-screen`
-  
+	* Alias is `.hidden-screen`
+	
 ------------------------------------------------------------------------------
 
 ### Features
@@ -155,7 +157,7 @@ Print-Ready supports a few popular CSS frameworks, including:
 
 * Twitter Bootstrap 3 [&#x1F517;][3]<sup>&#x21d7;</sup>
 * Twitter Bootstrap 4 [&#128279;][4]<sup>&#x21d7;</sup>
-  * Currently in Alpha-2 / Work In Progress
+	* Currently in Alpha-2 / Work In Progress
 
 ------------------------------------------------------------------------------
 
@@ -168,10 +170,10 @@ Included in Print-Ready are the Bootstrap add-on [stylesheets][bs3].
 ```txt
 print-ready/
 └── twbs-bootstrap-3/
-    └── css/
-        ├── bootstrap-pr.css
-        ├── bootstrap-pr.css.map
-        └── bootstrap-pr.min.css
+		└── css/
+				├── bootstrap-pr.css
+				├── bootstrap-pr.css.map
+				└── bootstrap-pr.min.css
 ```
 
 Add the appropriate `bootstrap-pr` CSS file in your webpage or template engine:
@@ -199,11 +201,11 @@ print-ready/
 |       ├── _printer-ready.scss
 |       └── _screen-ready.scss
 └── twbs-bootstrap-3/
-    ├── less/
-    |  ├── bootstrap-pr.less
-    |  └── lib/
-    |      └── {Contains selected files from the Bootstrap project}
-    └── test-page.htm
+		├── less/
+		|  ├── bootstrap-pr.less
+		|  └── lib/
+		|      └── {Contains selected files from the Bootstrap project}
+		└── test-page.htm
 ```
 
 &#x2139; You will need [lessc][8]<sup>&#x21d7;</sup> installed to compile with
@@ -220,20 +222,20 @@ Both container classes are made fluid.  i.e. there is no fixed width from the
 ##### `.col-pr-*` grid classes
 
 Using a set of `col-pr-*` classes, you can create an override grid system that
-  creates a page layout to house your content.
+	creates a page layout to house your content.
 
 There is also a `col-pr-0` class that hides the content from printing.
 
 Usage:
 ```html
 <div class="row">
-  <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 col-pr-0 sidebar">
-    .col-xs-12 .col-sm-5 .col-md-4 .col-lg-3 .col-pr-0 .sidebar
-    (Will be hidden when printed.)
-  </div>
-  <div class="col-xs-12 col-sm-7 col-md-8 col-lg-9 col-pr-12 main">
-    .col-xs-12 .col-sm-7 .col-md-8 .col-lg-9 .col-pr-12 .main
-  </div>
+	<div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 col-pr-0 sidebar">
+		.col-xs-12 .col-sm-5 .col-md-4 .col-lg-3 .col-pr-0 .sidebar
+		(Will be hidden when printed.)
+	</div>
+	<div class="col-xs-12 col-sm-7 col-md-8 col-lg-9 col-pr-12 main">
+		.col-xs-12 .col-sm-7 .col-md-8 .col-lg-9 .col-pr-12 .main
+	</div>
 </div>
 ```
 &#9888; The `.col-pr-*` class declaration must appear after the standard
@@ -251,7 +253,7 @@ To hide selected content use the `.hidden-pr` (or Bootstrap's own
 Usage:
 ```html
 <span class="hidden-pr">
-  This is an advertisement
+	This is an advertisement
 </span>
 ```
 
@@ -259,11 +261,13 @@ Usage:
 
 The following classes are also overridden to be hidden on printing:
 
-* `div.alert`
-* `.btn`
-* `.nav`
-* `.navbar`
-* `.breadcrumb`
+* `div.alert` - _alerts are visual cues for warnings or information, not sure if we need to print thoes_
+* `.breadcrumb` - _navigational_
+* `.btn` - _navigational_
+* `.nav` - _navigational_
+* `.navbar` - _navigational_
+* `.nav-tabs` - _navigational_
+* `.carousel` - _not sure how to print each carousel page, or whether one should._
 
 ------------------------------------------------------------------------------
 
@@ -277,10 +281,10 @@ Mostly the same as for Bootstrap 3, with a few changes in the
 ```txt
 print-ready/
 └── twbs-bootstrap-4/
-    └── css/
-        ├── bootstrap-pr.css
-        ├── bootstrap-pr.css.map
-        └── bootstrap-pr.min.css
+		└── css/
+				├── bootstrap-pr.css
+				├── bootstrap-pr.css.map
+				└── bootstrap-pr.min.css
 ```
 
 ##### Source
@@ -292,11 +296,11 @@ print-ready/
 |       ├── _printer-ready.scss
 |       └── _screen-ready.scss
 └── twbs-bootstrap-4/
-    ├── scss/
-    |  ├── bootstrap-pr.scss
-    |  └── lib/
-    |      └── {Contains selected files from the Bootstrap [v4-dev] project}
-    └── test-page.htm
+		├── scss/
+		|  ├── bootstrap-pr.scss
+		|  └── lib/
+		|      └── {Contains selected files from the Bootstrap [v4-dev] project}
+		└── test-page.htm
 ```
 
 &#x2139; You will need [compass][2]<sup>&#x21d7;</sup> installed to compile

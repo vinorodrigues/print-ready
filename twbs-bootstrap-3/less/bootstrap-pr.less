@@ -51,11 +51,29 @@
 	.col-pr-offset-0 { margin-left: 0; }
 
 	div.alert,
+	.breadcrumb,
 	.btn,
 	.nav,
 	.navbar,
-	.breadcrumb {
+	.nav-tabs,
+	.carousel {
 		display: none !important;
+	}
+
+	.tab-content {
+		& > .tab-pane {
+			display: block !important;
+			visibility: visible !important;
+		}
+
+		& > .fade {
+			opacity: 1;
+		}
+	}
+
+	.collapse {
+		display: block !important;
+		height: initial !important;
 	}
 }
 
