@@ -12,6 +12,10 @@
 	<link href="css/bootstrap-pr.css" rel="stylesheet">  <!-- !!!!! Do not use media="print" !!!!! -->
 
 	<style>
+		.printing {
+			/* css here */
+		}
+
 		/* @@@@@@@@@@@@@@@@@@@@ used in this example @@@@@@@@@@@@@@@@@@@@ */
 		body {
 			margin-top: 38px;
@@ -78,13 +82,14 @@
 		.print-ready-link b { font-weight: normal; }
 	</style>
 </head>
-<body>
+<body class="">
 	<a name="top"></a>
 	<div class="container">
 		<div class="blog-header preview-d">
 			<div class="preview-i">.blog-header</div>
 			<h1 class="blog-title">Printing with Print-Ready for Bootstrap 3</h1>
-			<p class="lead blog-description hidden-print">You can be selective on what parts of the header needs to print.</p>
+			<p class="lead blog-description hidden-print">You can be selective on what parts needs to <u>not</u> print.</p>
+			<p class="lead blog-description hidden-screen">Or you can select what parts should only print.</p>
 		</div>
 		<nav class="navbar navbar-inverse preview-d">
 			<div class="preview-i">.navbar <i>always hidden</i></div>
@@ -305,6 +310,18 @@
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="https://code.jquery.com/jquery-1.12.3.js"></script> <!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<script src="../html/js/print-ready.min.js"></script>
+	<script type="text/javascript">
+		$(document).on( 'printStart', function(event) {
+			console.log("printStart event tiggered");
+			// alert("printStart event tiggered");
+		});
+		$(document).on( 'printEnd', function(event) {
+			console.log("printEnd event tiggered");
+			// alert("printEnd event tiggered");
+		});
+	</script>
 
 	<!-- Preview stuff here / usually not on a page
 	================================================== -->
