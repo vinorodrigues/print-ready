@@ -13,6 +13,8 @@
  *  });
  *
  */
+if (!window.jQuery) { alert("This plugin requires jQuery"); }
+
 (function($) {
 
 	var isPrinting = false;
